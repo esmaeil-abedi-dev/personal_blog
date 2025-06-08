@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 sm:p-12 md:p-16 lg:p-24 pb-20 gap-16 font-[family-name:var(--font-geist-sans)] bg-primary sm:bg-secondary md:bg-accent lg:bg-black text-white">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
@@ -15,7 +15,7 @@ export default function Home() {
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
+            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold text-green-400">
               app/page.tsx
             </code>
             .
@@ -50,10 +50,17 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+
+        {/* Example of responsive text and visibility */}
+        <div className="text-center my-8 self-center">
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Responsive Title</h1>
+          <p className="text-sm sm:text-base md:text-lg text-accent">This text changes size based on screen width.</p>
+          <button className="mt-4 px-4 py-2 bg-primary text-white rounded hover:bg-blue-700 hidden sm:block">Visible on SM screens and up</button>
+        </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-200 hover:text-white"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
@@ -68,7 +75,7 @@ export default function Home() {
           Learn
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-200 hover:text-white"
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
@@ -83,7 +90,7 @@ export default function Home() {
           Examples
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-200 hover:text-white"
           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
